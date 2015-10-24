@@ -1,0 +1,15 @@
+{{extend 'layout.html'}}
+<h1>Procedure you shoud apply</h1>
+
+
+<h2>
+{{if (emp == 'EIA' and UC == 'CZA' and uccza == 'IUC')  or (emp == 'EIA' and UC == 'CZA' and uccza == 'IZA')  or (emp == 'EIA' and UC == 'CZA' and uccza == 'FZA')  or (emp == 'SEIA' and UC == 'CZA' and uccza == 'IUC')  or (emp == 'SEIA' and UC == 'CZA' and uccza == 'FZA')  or (emp == 'EIA' and UC == 'SZA' and ucsza1 == 'IUC')  or (emp == 'EIA' and UC == 'SZA' and ucsza1 == 'ZPD3')  or (emp == 'SEIA' and UC == 'SZA' and ucsza2 == 'IUC'):}} Apply procedure 1
+
+{{elif (emp == 'SEIA' and UC == 'CZA' and uccza == 'IZA')  or (emp == 'SEIA' and UC == 'SZA' and ucsza2 == 'ZPD2'):}} Apply procedure 2
+
+{{elif (emp == 'NALIC' and UC == 'CZA' and uccza == 'IUC')  or (emp == 'NALIC' and UC == 'SZA' and ucnalic == 'IUC')  or (emp == 'EIA' and UC == 'NAZA' and ucnaza == 'IUC')  or (emp == 'SEIA' and UC == 'NAZA' and ucnaza == 'IUC')  or (emp == 'NALIC' and UC == 'NAZA' and ucnaza == 'IUC'):}} Apply procedure 3
+
+{{else:}} Apply procedure 4
+{{pass}}
+</h2>
+
